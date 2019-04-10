@@ -1,0 +1,27 @@
+一、用git命令行上传本地代码到github
+
+在上传之前有必要解释一下相关概念：git分为三部分，一部分是自己的文件，另外一部分是缓存区，最后一个是本地库。git add xx操作是将本地文件添加到缓存区；git commit操作是将缓存区的文件提交到本地仓库；git push操作是将本地仓库的内容推送到远程仓库。
+
+1.进入本地的项目目录，右键“Git Bash here”,调出git命令行界面，然后输入
+
+git init
+2.就是将目录下的所有文件添加到缓存区，也可以将“.”换成具体的文件名
+
+git add .
+3.将上面缓存区的文件提交到本地仓库
+
+git commit -m "注释语句"
+4.去github上创建自己的本地仓库repository
+
+5.将本地的仓库关联到github上。后面的https链接换成刚刚自己在github上创建的仓库url地址
+
+git remote add origin https://github.com/yuexijun/myTest.git
+6.上传到github之前先pull一下远程仓库，执行如下命令
+
+git pull origin master
+7.上传代码到github远程仓库
+
+git push -u origin master
+执行完后，如果没有异常，等待执行完就上传成功了，中间可能让你输入用户名和密码，你只要输入点击继续就行了。
+
+最后贴上我上传成功后的截图：
